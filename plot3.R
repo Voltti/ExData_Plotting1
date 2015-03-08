@@ -7,7 +7,10 @@ rawdata <- read.table(file="household_power_consumption.txt", header = T, sep = 
 rawdata[,1] <- as.POSIXct(strptime(paste(rawdata[,1], rawdata[,2]), format="%d/%m/%Y %H:%M:%S"))
 colnames(rawdata)[1] <- "Date_Time"
 
-plot(rawdata$Date_Time, rawdata$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+plot(rawdata$Date_Time, rawdata$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="", col="black")
+lines(rawdata$Sub_metering_2, type="l", col="red")
+lines(rawdata$Date_Time,rawdata$Sub_metering_2, type="l", col="red")
+lines(rawdata$Date_Time,rawdata$Sub_metering_3, type="l", col="blue")
 
-dev.copy(png,"plot2.png", width=504, height=504)
+dev.copy(png,"plot3.png", width=504, height=504)
 dev.off()

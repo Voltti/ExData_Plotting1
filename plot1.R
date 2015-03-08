@@ -9,5 +9,7 @@ rawdata[,1] <- as.Date(rawdata[,1], "%d/%m/%Y")
 ## rawdata[,2] <- strptime(rawdata[,2], "%H:%M:%S")
 
 hist(rawdata$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
+
+
 dev.copy(png,"plot1.png", width=504, height=504)
 dev.off()
