@@ -11,6 +11,7 @@ plot(rawdata$Date_Time, rawdata$Sub_metering_1, type="l", ylab="Energy sub meter
 lines(rawdata$Sub_metering_2, type="l", col="red")
 lines(rawdata$Date_Time,rawdata$Sub_metering_2, type="l", col="red")
 lines(rawdata$Date_Time,rawdata$Sub_metering_3, type="l", col="blue")
+legend("topleft", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black","red","blue"), lty="solid", pch=" ")
 
 dev.copy(png,"plot3.png", width=504, height=504)
 dev.off()
