@@ -12,7 +12,7 @@ par(mfrow = c(2,2))
 
 plot(rawdata$Date_Time, rawdata$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
-plot(rawdata$Date_Time, rawdata$Global_reactive_power, type="l", ylab="Voltage", xlab="datetime")
+plot(rawdata$Date_Time, rawdata$Voltage, type="l", ylab="Voltage", xlab="datetime")
 
 plot(rawdata$Date_Time, rawdata$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="", col="black")
 lines(rawdata$Sub_metering_2, type="l", col="red")
