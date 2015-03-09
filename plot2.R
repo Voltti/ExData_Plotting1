@@ -9,5 +9,5 @@ colnames(rawdata)[1] <- "Date_Time"
 
 plot(rawdata$Date_Time, rawdata$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
-dev.copy(png,"plot2.png", width=504, height=504)
+dev.copy(png,"plot2.png", width=480, height=480)
 dev.off()
